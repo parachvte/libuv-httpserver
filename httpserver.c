@@ -14,7 +14,7 @@ const static int   BACKLOG  = 128;
   "Content-Type: text/plain\r\n"  \
   "Content-Length: 14\r\n"        \
   "\r\n"                          \
-  "Hello, World!\r\n"
+  "Hello, World!\n"
 
 /* types */
 typedef struct {
@@ -110,7 +110,8 @@ int headers_complete_cb(http_parser* parser) {
 
   uv_write_t *write_req = malloc(sizeof(uv_write_t));
   uv_buf_t buf = uv_buf_init(RESPONSE, sizeof(RESPONSE));
-  uv_write(write_req, (uv_stream_t *) &client->handle, &buf, 1, write_cb);
+  int r = uv_write(write_req, (uv_stream_t *) &client->handle, &buf, 1, write_cb);
+  ASSERT(r == 0);
 
   return 1;
 }
