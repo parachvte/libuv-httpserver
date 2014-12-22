@@ -1,4 +1,4 @@
-## libuv-httpserver
+# libuv-httpserver
 
 * Author: Ryan
 * Last modified: 2014.12.23
@@ -14,6 +14,14 @@ It takes lastest stable versions:
 * [Libuv](https://github.com/libuv/libuv), Release v1.0.2 (released on 2014.12.10)
 * [http-parser](https://github.com/joyent/http-parser), Release v2.3 (released on 2014.5.13)
 
+### Resources
+
+* [using libuv and http-parser to build a webserver](http://vimeo.com/24713213)
+    * Tutorial by Ryan Dahl (2011), APIs changed, but basic routine stills
+* [learnuv](https://github.com/thlorenz/learnuv) - Learn uv for fun and profit, a self guided workshop to the library that powers Node.js.
+    * It's of great fun! I passed the first 7 exercises to comprehend libuv APIs
+* [uv.h](https://github.com/libuv/libuv/blob/v1.x/include/uv.h)
+    * Quick Reference for libuv
 
 ### Benchmark
 
