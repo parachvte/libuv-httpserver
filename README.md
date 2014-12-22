@@ -14,6 +14,20 @@ It takes lastest stable versions:
 * [Libuv](https://github.com/libuv/libuv), Release v1.0.2 (released on 2014.12.10)
 * [http-parser](https://github.com/joyent/http-parser), Release v2.3 (released on 2014.5.13)
 
+### How to 
+
+Make sure you are on OS X, Xcode installed, [gyp](https://code.google.com/p/gyp/) installed.
+
+```
+git clone git@github.com:Ryannnnnnn/libuv-httpserver.git && cd libuv-httpserver
+git submodule update --init
+
+make
+./httpserver
+```
+
+Then, `curl 127.0.0.1:8888` to test it.
+
 ### Resources
 
 * [using libuv and http-parser to build a webserver](http://vimeo.com/24713213)
