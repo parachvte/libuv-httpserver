@@ -22,6 +22,8 @@ It takes lastest stable versions:
     * It's of great fun! I passed the first 7 exercises to comprehend libuv APIs
 * [uv.h](https://github.com/libuv/libuv/blob/v1.x/include/uv.h)
     * Quick Reference for libuv
+* [Haywire](https://github.com/kellabyte/Haywire) - Haywire is an asynchronous HTTP server framework written in C that's built using the event loop based libuv platform layer that node.js is built on top of.
+    * Oops!
 
 ### Benchmark
 
