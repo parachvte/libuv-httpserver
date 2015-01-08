@@ -1,0 +1,19 @@
+httpserver: httpserver.c libuv/libuv.a http-parser/http_parser.o
+	$(CC) -o httpserver \
+	httpserver.c libuv/out/Debug/libuv.a http-parser/http_parser.o \
+	-lpthread -I libuv/include -O3
+
+	
+libuv/libuv.a:
+	cd libuv && python gyp_uv.py -f make
+	cd libuv && make -C out
+
+http-parser/http_parser.o:
+	$(MAKE) -C http-parser http_parser.o
+
+clean:
+	$(MAKE) -C http-parser clean
+	-$(RM) -r libuv/out
+	-$(RM) -r libuv/build
+	-$(RM) -r libuv/uv.xcodeproj
+	-$(RM) httpserver
